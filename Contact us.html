@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link href="/Css/main.css" rel="stylesheet">
+    <script>
+        function validateform() {
+            var Fname=document.forms["messageForm"]["FirstName"].value;
+            var lname=document.forms["messageForm"]["LastName"].value;
+            var num=document.forms["messageForm"]["PhoneNumber"].value;
+            var email=document.forms["messageForm"]["Email"].value;
+            if (Fname == "" || lname == "" || num == ""|| email == ""){
+                alert("Invaild request. Input all the necessary details");
+            }
+            else{
+                alert("We have received your info. We will contact you via email.");
+            }
+        }
+    </script>
+    <style>
+        #home{
+            margin-left: auto;
+        }
+        form {
+            border: 1px solid #ccc; 
+            padding: 20px; 
+            background-color: #f9f9f9;             
+            width: 80%; 
+            max-width: 400px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+        .container{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2{
+            margin-bottom: 30px;
+        }
+        .form-control {
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+    
+        label {
+            margin-bottom: 5px;
+            font-weight: bold; 
+        }
+    
+        input {
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    
+        input:focus {
+            border-color: #007BFF; 
+            outline: none; 
+        }
+    </style>
+
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <a href="#" class="logo">
+            <img src="/Photos/watch logo2-copy.png" class="logo" alt="Logo"></a>
+            <a href="#" class="link"><h3>The Watch Vault </h3>
+            </a>
+            <!-- link to different pages  -->
+            <a href="#" class="link" id="home"> Home</a>
+            <a href="#" class="link">Blog</a>
+            <a href="/Html Pages/ProductPage.html" class="link">Product Page</a>
+            <a href="/Html Pages/ResearchPage.html" class="link">Research Page</a>
+            <a href="#" class="link">About Us</a>
+            
+        </nav>
+
+    </div>
+    <!-- main content of the page -->
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form name="messageForm" class="form" onsubmit="validateform()">
+            <div class="form-control">
+                <label for="FirstName">First Name:</label>
+                <input type="text" id="FirstName" placeholder="Enter your first name" name="FirstName">
+            </div>
+            <div class="form-control">
+                <label for="LastName">Last Name:</label>
+                <input type="text" id="LastName" placeholder="Enter your last name" name="LastName">
+            </div>
+            <div class="form-control">
+                <label for="PhoneNumber">Phone Number:</label>
+                <input type="text" id="PhoneNumber" placeholder="Enter your phone number" name="PhoneNumber">
+            </div>
+            <div class="form-control">
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" placeholder="Enter your email address" name="Email">
+            </div>
+            <div class="form-class">
+                <input type="submit" onclick="" >
+            </div>
+            
+        </form>
+    </div>
+    
+    </div>
+</body>
+</html>
